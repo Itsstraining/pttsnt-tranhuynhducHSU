@@ -1,5 +1,10 @@
 // Add new functions, variables here
 function rutGon(a, res) {
+  if (a == 1) {
+    console.log(res)
+    return
+  }
+
   let i = 2
   do {
     if (a % i == 0) {
