@@ -1,8 +1,24 @@
 // Add new functions, variables here
+function rutGon(a, res) {
+  let i = 2
+  do {
+    if (a % i == 0) {
+      res += i + ' '
+      a = a / i
+      rutGon(a, res)
+      return
+    }
+    i++
+  } while (a > i)
+  console.log(res + i)
+}
 
 function main(input) {
-  // Your code goes here
-  // Using console.log to answer the question
+  if (input == 0) {
+    console.log(0)
+    return
+  }
+  rutGon(input, '')
 }
 
 module.exports = main;
